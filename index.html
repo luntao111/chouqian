@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日抽签</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="lottery" aria-live="polite">
+      <section class="panel">
+        <div class="jar" aria-hidden="true">
+          <div class="stick stick-one"></div>
+          <div class="stick stick-two"></div>
+          <div class="stick stick-three"></div>
+          <div class="cup"></div>
+        </div>
+
+        <p class="eyebrow">今日抽签</p>
+        <h1 id="result">摇一摇</h1>
+        <p id="hint" class="hint">看看今天是摸鱼，还是干活。</p>
+
+        <button id="drawButton" class="draw-button" type="button">
+          摇一摇
+        </button>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
