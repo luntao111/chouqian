@@ -44,8 +44,39 @@ const outcomes = [
     className: "is-photo",
     hint: "语气礼貌一点，成功率会高一点。",
   },
+  {
+    label: "健身",
+    className: "is-fitness",
+    hint: "先动起来，十分钟也算给身体交代了。",
+  },
+  {
+    label: "减肥",
+    className: "is-diet",
+    hint: "今天少点一份快乐，多攒一点轻盈。",
+  },
+  {
+    label: "来一罐红牛",
+    className: "is-redbull",
+    hint: "补充能量可以，别把睡眠也一起抽走。",
+  },
+  {
+    label: "焦虑",
+    className: "is-anxiety",
+    hint: "先深呼吸，把最小的一步写下来。",
+  },
+  {
+    label: "先偷一会菜",
+    className: "is-farm",
+    hint: "菜可以先收，正事记得也要回头收。",
+  },
+  {
+    label: "羊哥来点token",
+    className: "is-token",
+    hint: "今日玄学：先喊羊哥，再看额度。",
+  },
 ];
 
+const outcomeClasses = outcomes.map((outcome) => outcome.className);
 const panel = document.querySelector(".panel");
 const jar = document.querySelector(".jar");
 const result = document.querySelector("#result");
@@ -76,16 +107,7 @@ function draw() {
   button.disabled = true;
   result.textContent = "抽签中";
   hint.textContent = "正在问今天的运气。";
-  panel.classList.remove(
-    "is-fish",
-    "is-work",
-    "is-stock",
-    "is-chat",
-    "is-study",
-    "is-lesson",
-    "is-course",
-    "is-photo",
-  );
+  panel.classList.remove(...outcomeClasses);
 
   window.setTimeout(() => {
     result.textContent = outcome.label;

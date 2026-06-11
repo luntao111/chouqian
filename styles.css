@@ -232,6 +232,30 @@ h1 {
   color: #1f7a8c;
 }
 
+.is-fitness h1 {
+  color: #2f7d32;
+}
+
+.is-diet h1 {
+  color: #5c7f22;
+}
+
+.is-redbull h1 {
+  color: #c7352e;
+}
+
+.is-anxiety h1 {
+  color: #7557a7;
+}
+
+.is-farm h1 {
+  color: #4c7a2d;
+}
+
+.is-token h1 {
+  color: #0d6b78;
+}
+
 @keyframes shake {
   0%,
   100% {
